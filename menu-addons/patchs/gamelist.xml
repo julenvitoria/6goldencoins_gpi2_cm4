@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<gameList>
+	<game>
+		<path>./filemanager.rp</path>
+		<name>Gestor de archivos</name>
+		<desc>Administrador de archivos básico en ASCII para Linux que le permite navegar, copiar, eliminar y mover archivos.</desc>
+		<image>/home/pi/RetroPie/retropiemenu/icons/filemanager.png</image>
+	</game>
+	<game>
+		<path>./retronetplay.rp</path>
+		<name>RetroArch Net Play</name>
+		<desc>Set up RetroArch Netplay options, choose host or client, port, host IP, delay frames, and your nickname.</desc>
+		<image>/home/pi/RetroPie/retropiemenu/icons/retronetplay.png</image>
+	</game>
+	<game>
+		<path>./Loading Screens.sh</path>
+		<name>#06.Pantallas de carga</name>
+		<desc>Este script activará o desactivará fácilmente las pantallas de carga de Plata o roms.Las pantallas de carga se muestran durante unos segundos previo iniciar un juego. Si necesita acceder a la ventana del comando de configuracion, presione el botón A tan pronto como desaparezca la imagen.</desc>
+		<image>./icons/Loading Screens.png</image>
+	</game>
+	<game>
+		<path>./esthemes.rp</path>
+		<name>ES Themes</name>
+		<desc>Install, uninstall, or update EmulationStation themes. Most themes can be previewed at https://retropie.org.uk/docs/Themes/.</desc>
+		<image>/home/pi/RetroPie/retropiemenu/icons/esthemes.png</image>
+	</game>
+	<game>
+		<path>./configedit.rp</path>
+		<name>Editor de configuracion</name>
+		<desc>Cambie las opciones comunes de RetroArch y edite manualmente las configuraciones de RetroArch, las configuraciones globales y las configuraciones que no son de RetroArch.</desc>
+		<image>./icons/configedit.png</image>
+	</game>
+	<game>
+		<path>./resetpadmenu.sh</path>
+		<name>#07.Reset mapeado</name>
+		<desc>Resetee su mapeado. Se borrara el contenido de la carpeta opt/retropie/configs/all/retroarch-joypads. Se restablecera el archivo es_input.cfg. Por ultimo se reiniciara tu pi.</desc>
+		<image>./icons/resetpadmenu.png</image>
+	</game>
+	<game>
+		<path>./gunconf.sh</path>
+		<name>#11.Gunconf</name>
+		<desc>Gunconf es una utilidad para configurar pistolas Aimtrak.</desc>
+		<image>./icons/Aimtrack Configuration.png</image>
+	</game>
+	<game>
+		<path>./runcommand.rp</path>
+		<name>Run Command Editor</name>
+		<desc>Cambie lo que aparece en la pantalla del comando de ejecución. Habilite o deshabilite el menú, habilite o deshabilite el diseño artístico y cambie la configuración de la CPU.</desc>
+		<image>./icons/runcommand.png</image>
+	</game>
+	<game>
+		<path>./demomode.sh</path>
+		<name>#13.Demo mode</name>
+		<desc>El modo demo comienza y cambia a un nuevo juego aleatoriamente después de un minuto a menos que se detecte la entrada del mando o del teclado. El modo demo es una excelente manera de descubrir nuevos juegos en grandes colecciones.</desc>
+		<image>./icons/demomode.png</image>
+		<rating>0</rating>
+	</game>
+	<game>
+		<path>./GPIO Shutdown.sh</path>
+		<name>#12.GPIO Pulsador</name>
+		<desc>Este script habilitará o deshabilitará el script de apagado/reinicio de GPIO, NEspicase, Nespicase+, Superpicase, megapicase, ONOFFSHIM, Mausberry, Argon1(pi4) Cuando esté habilitado. Para GPIO unicamente conecte cualquier pulsador a los pines GPIO 5/6. Una pulsacion saldra del emulador o reinciara, pulsacíon superior a 5 segundos apagara, tambien podra encender la Raspberry.
+    </desc>
+		<image>./icons/GPIO Shutdown.png</image>
+	</game>
+	<game>
+		<path>./retropiemenu_favoritos.sh</path>
+		<name>#14.Backup favoritos</name>
+		<desc>Backup favoritos y restauración, con esta herramienta podra realizar copia y restauración, el archivo final se guardara en /RetroPie/roms/favoritosguardados/favoritos.xml</desc>
+		<image>./icons/retropiemenu_favoritos.png</image>
+	</game>
+	<game>
+		<path>./infosistema.sh</path>
+		<name>#03.Información del sistema</name>
+		<desc>Acceda a un menú donde podrá ver información del sistema, como puede ser el espacio de disco ocupado, la temperatura, etc...</desc>
+		<image>./icons/infosistema.png</image>
+	</game>
+	<game>
+		<path>./audiosettings.rp</path>
+		<name>Audio</name>
+		<desc>Configure audio settings. Choose default of auto, 3.5mm jack, or HDMI. Mixer controls, and apply default settings.</desc>
+		<image>/home/pi/RetroPie/retropiemenu/icons/audiosettings.png</image>
+	</game>
+	<game>
+		<path>./Creditos.sh</path>
+		<name>#01.Creditos</name>
+		<desc>Visualice los creditos, obtenga mas informacion acerca de los creadores de la imagen.</desc>
+		<image>./icons/logo-PLATA-O-ROMS.png</image>
+	</game>
+	<game>
+		<path>./showip.rp</path>
+		<name>#04.Mostrar IP</name>
+		<desc>Muestra su dirección IP actual, así como otra información proporcionada por el comando, "ip addr show".</desc>
+		<image>./icons/showip.png</image>
+	</game>
+	<game>
+		<path>./backgroundmusic.sh</path>
+		<name>backgroundmusic</name>
+	</game>
+	<game>
+		<path>./Background Music.sh</path>
+		<name>#05.Musica de fondo</name>
+		<desc>Este script habilitará o deshabilitará de música de fondo en EmulatioStation.Cuando esté habilitado, copie los archivos mp3 / wav en la siguiente carpeta y se reproducirán automáticamente mientras este dentro de Emulation Station. /home/pi/RetroPie/roms/music</desc>
+		<image>./icons/Background Music.png</image>
+	</game>
+	<game>
+		<path>./bluetooth.rp</path>
+		<name>Bluetooth</name>
+		<desc>Register and connect to Bluetooth devices. Unregister and remove devices, and display registered and connected devices.</desc>
+		<image>/home/pi/RetroPie/retropiemenu/icons/bluetooth.png</image>
+	</game>
+	<game>
+		<path>./reicastmaps.sh</path>
+		<name>#08.Dreamcast fix mapeado</name>
+		<desc>Repara el mapeado para reicast (Dreamcast) de varios gamepad.</desc>
+		<image>./icons/dreamcastmaps.png</image>
+	</game>
+	<game>
+		<path>./N64HDTextures.sh</path>
+		<name>#10.N64 texturas HD descargador</name>
+		<desc>Script para instalar texturas de alta resolución N64 para usar con el emulador Mupen64Plus.</desc>
+		<image>./icons/N64HDTextures.png</image>
+	</game>
+	<game>
+		<path>./Delete_pla_last.sh</path>
+		<name>#09.Reseteado last played y contador</name>
+		<desc>Al ejecutar esta opcion accederemos a un menu selectivo donde podremos seleccionar 2 opciones para el reseteo de la lista de Last player y los contadores, el script analizara todos los archivos gamelist.xml y borrara ambas lineas.</desc>
+		<image>./icons/Delete_pla_last.png</image>
+	</game>
+	<game>
+		<path>./wifi.rp</path>
+		<name>WiFi</name>
+		<desc>Connect to or disconnect from a WiFi network and configure WiFi settings.</desc>
+		<image>/home/pi/RetroPie/retropiemenu/icons/wifi.png</image>
+	</game>
+	<game>
+		<path>./raspiconfig.rp</path>
+		<name>Raspi-Config</name>
+		<desc>Change user password, boot options, internationalization, camera, add your Pi to Rastrack, overclock, overscan, memory split, SSH and more.</desc>
+		<image>/home/pi/RetroPie/retropiemenu/icons/raspiconfig.png</image>
+	</game>
+	<game>
+		<path>./rpsetup.rp</path>
+		<name>RetroPie Setup</name>
+		<desc>Install RetroPie from binary or source, install experimental packages, additional drivers, edit Samba shares, custom scraper, as well as other RetroPie-related configurations.</desc>
+		<image>./icons/rpsetup.png</image>
+	</game>
+	<game>
+		<path>./retroarch.rp</path>
+		<name>Retroarch</name>
+		<desc>Launches the RetroArch GUI so you can change RetroArch options. Note: Changes will not be saved unless you have enabled the "Save Configuration On Exit" option.</desc>
+		<image>./icons/retroarch.png</image>
+	</game>
+	<game>
+		<path>./splashscreen.rp</path>
+		<name>Pantalla de bienvenida</name>
+		<desc>Habilite o deshabilite la pantalla de bienvenida en el arranque de RetroPie. Elija una pantalla de bienvenida, descargue nuevas pantallas de bienvenida y regrese a la pantalla de inicio predeterminada.</desc>
+		<image>./icons/splashscreen.png</image>
+	</game>
+	<game>
+		<path>./Extras plata o roms.sh</path>
+		<name>#02.Extras plata o roms</name>
+		<desc>Acceda a un menu selectivo donde podra Activar/Desactivar bezel a diferentes resoluciones o poner solo scanlines a 1024, Overclock para Raspberry pi2 y 3, realizar backup a sus partidas, añadir su propio script, ver los creditos, todo sin necesidad de teclado .</desc>
+		<image>./icons/Extras plata o roms.png</image>
+		<playcount>6</playcount>
+		<lastplayed>20220115T180931</lastplayed>
+	</game>
+</gameList>

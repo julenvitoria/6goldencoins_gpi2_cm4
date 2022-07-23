@@ -1,0 +1,8 @@
+pkg_origin="binary"
+pkg_date="2021-06-08T05:09:01+02:00"
+pkg_repo_type="git"
+pkg_repo_url="https://github.com/libretro/gw-libretro.git"
+pkg_repo_branch="master"
+pkg_repo_commit="50538984da8755db55577683cc98912e26ee8d8a"
+pkg_repo_date="2021-06-06T18:19:48+02:00"
+pkg_repo_extra=""

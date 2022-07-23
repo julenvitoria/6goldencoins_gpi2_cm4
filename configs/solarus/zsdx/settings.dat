@@ -1,0 +1,6 @@
+video_mode = "scale2x"
+fullscreen = true
+sound_volume = 100
+music_volume = 100
+language = "es"
+joypad_enabled = true
