@@ -73,6 +73,36 @@ else
         sed -i 's|</gameList>|\t<game>\n\t\t<path>./#Menu-Addons/restoresystems.sh</path>\n\t\t<name>Restaurar sistemas de EmulationStation</name>\n\t\t<desc>Script para instalar/restaurar sistemas personalizados adicionales en es_systems.cfg después de por ejemplo una actualización a traves de retropie-setup. ¡¡¡ATENCION: SI SE HAN HECHO CAMBIOS ADICIONALES EN EL ARCHIVO es_systems.cfg UBICADO EN /opt/retropie/configs/all/emulationstation SE PERDERAN A EJECUTARSE ESTA OPCION PORQUE SE MACHACARA CON EL QUE SE DESCARGUE!!! Se recomienda realizar una copia de seguridad antes de ejecutar esta operación.</desc>\n\t\t<image>./#Menu-Addons/iconos/restoresystems.png</image>\n\t\t<playcount>0</playcount>\n\t\t<lastplayed>20180514T205700</lastplayed>\n\t</game>\n</gameList>|' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
 fi
 
+#Crear directorio de temas
+if [ -d '/home/pi/RetroPie/retropiemenu/#Menu-Addons/#temas' ]; then
+        echo "Directorio temas ya fue creado anteriormente... Borrando y descargando de nuevo..."
+        sleep 2
+        rm -R '/home/pi/RetroPie/retropiemenu/#Menu-Addons/#temas'
+        mkdir '/home/pi/RetroPie/retropiemenu/#Menu-Addons/#temas'
+else
+        echo "Creando directorio temas y descargándolos..."
+        sleep 2
+        mkdir '/home/pi/RetroPie/retropiemenu/#Menu-Addons/#temas'
+fi
+
+#Instalar tema y launchings Super Retroboy 
+wget -O- https://raw.githubusercontent.com/julenvitoria/Kelboy-SuperRetroBoyTheme/main/ThemePlusLaunchings.sh>/home/pi/RetroPie/retropiemenu/Update-Addons/temas/SRBtheme.sh
+chmod +x /home/pi/RetroPie/retropiemenu/Update-Addons/temas/SRBtheme.sh
+if grep -q "SRBtheme.sh" /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml ; then
+        echo "SRBtheme ya se encuentra gamelist.xml"
+else
+        sudo sed -i 's|</gameList>|\t<game>\n\t\t<path>./Update-Addons/temas/SRBtheme.sh</path>\n\t\t<name>SuperRetroBoy theme + Launchings</name>\n\t\t<desc>Script para instalar el tema Super Retro Boy de KALEL1981 y launchings de sistemas a juego.</desc>\n\t\t<image></image>\n\t\t<playcount>0</playcount>\n\t\t<lastplayed>20180514T205700</lastplayed>\n\t</game>\n</gameList>|' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
+fi
+
+#Instalar tema y launchings SuperLopezGB
+wget -O- https://raw.githubusercontent.com/julenvitoria/Kelboy-SuperLopezGBTheme/main/SLGBtheme.sh>/home/pi/RetroPie/retropiemenu/Update-Addons/temas/SLGBtheme.sh
+chmod +x /home/pi/RetroPie/retropiemenu/Update-Addons/temas/SLGBtheme.sh
+if grep -q "SLGBtheme.sh" /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml ; then
+        echo "SLGBtheme ya se encuentra gamelist.xml"
+else
+        sudo sed -i 's|</gameList>|\t<game>\n\t\t<path>./Update-Addons/temas/SLGBtheme.sh</path>\n\t\t<name>SuperLopezGB theme + Launchings</name>\n\t\t<desc>Script para instalar el tema SuperLopezGB de mlopezmad y launchings a juego.</desc>\n\t\t<image></image>\n\t\t<playcount>0</playcount>\n\t\t<lastplayed>20180514T205700</lastplayed>\n\t</game>\n</gameList>|' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
+fi
+
 #Crear directorio de fixes
 if [ -d '/home/pi/RetroPie/retropiemenu/#Menu-Addons/#fixes' ]; then
         echo "Directorio fixes ya fue creado anteriormente... Borrando y descargando de nuevo..."
