@@ -86,8 +86,8 @@ else
 fi
 
 #Instalar tema y launchings Super Retroboy 
-wget -O- https://raw.githubusercontent.com/julenvitoria/Kelboy-SuperRetroBoyTheme/main/ThemePlusLaunchings.sh>/home/pi/RetroPie/retropiemenu/Update-Addons/temas/SRBtheme.sh
-chmod +x /home/pi/RetroPie/retropiemenu/Update-Addons/temas/SRBtheme.sh
+wget -O- https://raw.githubusercontent.com/julenvitoria/Kelboy-SuperRetroBoyTheme/main/ThemePlusLaunchings.sh>'/home/pi/RetroPie/retropiemenu/#Menu-Addons/#temas/SRBtheme.sh'
+chmod +x '/home/pi/RetroPie/retropiemenu/#Menu-Addons/#temas/SRBtheme.sh'
 if grep -q "SRBtheme.sh" /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml ; then
         echo "SRBtheme ya se encuentra gamelist.xml"
 else
@@ -95,8 +95,8 @@ else
 fi
 
 #Instalar tema y launchings SuperLopezGB
-wget -O- https://raw.githubusercontent.com/julenvitoria/Kelboy-SuperLopezGBTheme/main/SLGBtheme.sh>/home/pi/RetroPie/retropiemenu/Update-Addons/temas/SLGBtheme.sh
-chmod +x /home/pi/RetroPie/retropiemenu/Update-Addons/temas/SLGBtheme.sh
+wget -O- https://raw.githubusercontent.com/julenvitoria/Kelboy-SuperLopezGBTheme/main/SLGBtheme.sh>'/home/pi/RetroPie/retropiemenu/#Menu-Addons/#temas/SLGBtheme.sh'
+chmod +x '/home/pi/RetroPie/retropiemenu/#Menu-Addons/#temas/SLGBtheme.sh'
 if grep -q "SLGBtheme.sh" /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml ; then
         echo "SLGBtheme ya se encuentra gamelist.xml"
 else
