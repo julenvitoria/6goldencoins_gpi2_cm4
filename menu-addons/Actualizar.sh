@@ -16,10 +16,10 @@ else
 fi
 
 #Añadir menu addons al gamelist del menu retropie
-if grep -q "#15.Menu addons" /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml ; then
+if grep -q "#14.Menu addons" /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml ; then
         echo "El Menu-Addons ya se encuentra gamelist.xml"
 else
-        sed -i 's|</gameList>|\t<folder>\n\t\t<path>./#Menu-Addons/</path>\n\t\t<name>#15.Menu addons</name>\n\t\t<desc>Acceso al menú Addons donde podrá ver diferentes opciones para realizar diversas operaciones tales como descargar el archivo emulators.cfg original (o la actualizacion que haya en github) o restaurar sistemas en el es_systems.cfg que estaban en la imagen original porque se hayan ido al hacer una actualizacion. ¡¡¡ ATENCION IMPORTANTE: ES NECESARIO TENER CONEXION A INTERNET PARA EL CORRECTO FUNCIONAMIENTO DE ESTE MENU!!!</desc>\n\t\t<image>./#Menu-Addons/iconos/Menu.png</image>\n\t\t<playcount>0</playcount>\n\t\t<lastplayed>20180514T205700</lastplayed>\n\t</folder>\n</gameList>|' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
+        sed -i 's|</gameList>|\t<folder>\n\t\t<path>./#Menu-Addons/</path>\n\t\t<name>#14.Menu addons</name>\n\t\t<desc>Acceso al menú Addons donde podrá ver diferentes opciones para realizar diversas operaciones tales como descargar el archivo emulators.cfg original (o la actualizacion que haya en github) o restaurar sistemas en el es_systems.cfg que estaban en la imagen original porque se hayan ido al hacer una actualizacion. ¡¡¡ ATENCION IMPORTANTE: ES NECESARIO TENER CONEXION A INTERNET PARA EL CORRECTO FUNCIONAMIENTO DE ESTE MENU!!!</desc>\n\t\t<image>./#Menu-Addons/iconos/Menu.png</image>\n\t\t<playcount>0</playcount>\n\t\t<lastplayed>20180514T205700</lastplayed>\n\t</folder>\n</gameList>|' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
 fi
 
 #Añadir menu fixes al gamelist del menu retropie
