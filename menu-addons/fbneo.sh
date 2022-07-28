@@ -23,7 +23,7 @@ echo "Descargando core lr-fbneo y aplicando fix..."
 echo ""
 mkdir /home/pi/scripts/tmp/
 cd /home/pi/scripts/tmp/
-/home/pi/scripts/github-downloader.sh https://github.com/julenvitoria/6goldencoinspi4/tree/master/menu-addons/patchs/lr-fbneo
+/home/pi/scripts/github-downloader.sh https://raw.githubusercontent.com/julenvitoria/6goldencoins_gpi2_cm4/tree/master/menu-addons/patchs/lr-fbneo
 sudo rm -R /opt/retropie/libretrocores/lr-fbneo
 sudo cp -R lr-fbneo /opt/retropie/libretrocores/
 sudo chmod +x /opt/retropie/libretrocores/lr-fbneo/fbneo_libretro.so

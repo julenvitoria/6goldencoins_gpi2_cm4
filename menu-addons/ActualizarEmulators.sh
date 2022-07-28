@@ -14,4 +14,4 @@ echo "Conexion con GitHub.com establecida, continuando..."
 sleep 2
 echo "Descargando emulators.cfg..."
 sleep 2
-wget -O- https://raw.githubusercontent.com/julenvitoria/6goldencoinspi4/main/menu-addons/patchs/emulators.cfg>/opt/retropie/configs/all/emulators.cfg
+wget -O- https://raw.githubusercontent.com/julenvitoria/6goldencoins_gpi2_cm4/main/menu-addons/patchs/emulators.cfg>/opt/retropie/configs/all/emulators.cfg

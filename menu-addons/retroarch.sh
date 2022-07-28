@@ -23,7 +23,7 @@ echo "Descargando core lr-gw y aplicando fix..."
 echo ""
 mkdir /home/pi/scripts/tmp/
 cd /home/pi/scripts/tmp/
-/home/pi/scripts/github-downloader.sh https://github.com/julenvitoria/6goldencoinspi4/tree/master/menu-addons/patchs/retroarch
+/home/pi/scripts/github-downloader.sh https://raw.githubusercontent.com/julenvitoria/6goldencoins_gpi2_cm4/tree/master/menu-addons/patchs/retroarch
 sudo rm -R /opt/retropie/emulators/retroarch/bin
 sudo rm -R /opt/retropie/emulators/retroarch/etc
 chmod +x retroarch/bin/retroarch

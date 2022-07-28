@@ -23,7 +23,7 @@ echo "Descargando binario de ES en español y aplicando fix..."
 echo ""
 mkdir /home/pi/scripts/tmp/
 cd /home/pi/scripts/tmp/
-/home/pi/scripts/github-downloader.sh https://github.com/julenvitoria/6goldencoinspi4/tree/master/menu-addons/patchs/emulationstation
+/home/pi/scripts/github-downloader.sh https://raw.githubusercontent.com/julenvitoria/6goldencoins_gpi2_cm4  /tree/master/menu-addons/patchs/emulationstation
 chmod +x emulationstation
 if [ -f "/home/pi/scripts/tmp/emulationstation" ]; then
     /home/pi/scripts/multi_switch.sh --es-systemd
