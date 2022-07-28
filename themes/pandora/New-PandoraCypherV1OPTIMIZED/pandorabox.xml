@@ -1,0 +1,215 @@
+<!--
+Theme: PandoraBox azul
+version: 2.1
+author: @Re_tux & Carli - Plata o Roms (New-Pandora.Cypher.V1 Modificado por @Cypher.Delta)
+license: creative commons CC-BY-NC-SA
+originally based on: "simple" by nils bonenberger
+					 PandoraBox losernator v1.1
+					 Pandorabox azul @Draqen88 
+					 pandora theme by Ruckage v1.0
+					 New-Pandora.Cypher.V1  @cypher.delta
+-->
+<theme>
+<formatVersion>4</formatVersion>
+<feature supported="carousel">
+	<view name="system">
+		<image name="background" extra="true">
+			<tile>false</tile>
+			<size>1 1</size>
+			<pos>0 0</pos>
+			<origin>0 0</origin>
+			<path>./art/top_bg.png</path>
+		</image>
+		<helpsystem name="help">
+			<fontPath>./art/Digital-Serial-Bold.ttf</fontPath>
+			<origin>0.5 1</origin>
+			<pos>0.5 0.985</pos>
+			<fontSize>0.034</fontSize>
+			<textColor>a4b7c4</textColor>
+			<iconColor>a4b7c4</iconColor>
+		</helpsystem>
+		<image name="CenterFade" extra="true">
+			<tile>false</tile>
+			<size>1 0.5</size>
+			<pos>0.5 0.5</pos>
+			<origin>0.5 0.5</origin>
+			<path>./art/centerfade.png</path>
+			<color>8b000050</color>
+		</image>
+        <carousel name="systemcarousel">
+			<type>horizontal</type>
+			<color>14141400</color>
+			<logoScale>2.2</logoScale>
+			<logoSize>0.15625 0.097222222222222</logoSize>
+        </carousel>
+		<text name="logoText"> <!-- Texto de juegos disponibles -->
+			<fontSize>0.1</fontSize>
+			<pos>0.3 0.07</pos>
+			<color>ffffff</color>
+			<text>${system.fullName}</text>	
+			<origin>0.5 0.5</origin>
+			<fontPath>./art/Digital-Serial-Bold-folder.ttf</fontPath>
+		</text>
+		<text name="systemInfo"> <!-- REVISAR -->
+			<backgroundColor>FFFFFF00</backgroundColor>
+			<color>FFFFFF</color>
+			<fontPath>./art/Digital-Serial-Bold-folder.ttf</fontPath>
+			<fontSize>0.025</fontSize>
+		</text>    
+    </view>
+</feature>
+<view name="basic, detailed, video, grid">
+    <image name="background">
+		<tile>false</tile>
+		<pos>0 0</pos>
+		<origin>0 0</origin>
+		<size>1 1</size>
+		<path>./art/bg_wide.png</path>
+	</image>
+	<text name="md_description">
+		<color>969696</color>
+		<forceUppercase>0</forceUppercase>
+		<fontPath>./art/Digital-Serial-Bold-folder.ttf</fontPath><!-- fuente de la descripcion -->
+		<fontSize>0.23</fontSize>
+		<size>0.467 0.16</size>
+		<pos>0.5 1</pos>
+	</text>
+	<textlist name="gamelist">
+		<selectorImagePath>./art/selector.png</selectorImagePath><!-- imagen del selector de roms -->
+		<selectorHeight>0.0648148148148148</selectorHeight>
+		<selectorColor>ffffff</selectorColor>
+		<forceUppercase>1</forceUppercase>
+		<fontPath>./art/Digital-Serial-Bold-folder.ttf</fontPath><!--fuente de la lista-->
+		<fontSize>0.0425925925925926</fontSize>
+		<lineSpacing>1.739130434782609</lineSpacing>
+		<primaryColor>ffffff66</primaryColor>
+		<secondaryColor>ffff00</secondaryColor>
+		<selectedColor>ffffff</selectedColor>
+		<size>0.5625 0.6666666666666667</size><!-- ancho de la barra de scroll -->
+		<pos>0.00005 0.200</pos><!-- posición de la lista -->
+		<alignment>left</alignment> <!-- Sin esto, donde no hay media (en msdos-ibm que no tenemos ni videos ni imagenes) la lista se pone al centro -->
+		<horizontalMargin>0.05</horizontalMargin>
+		<scrollSound>./sounds/se_sys_cursor.wav</scrollSound>
+	</textlist>
+	<text name="md_lastplayed, md_lbl_genre, md_lbl_rating, md_lbl_developer, md_lbl_publisher, md_publisher, md_lbl_lastplayed, md_lbl_playcount, md_playcount, md_lbl_players, md_lbl_releasedate">
+		<color>969696</color>
+		<forceUppercase>0</forceUppercase>
+		<fontPath>./art/font.ttf</fontPath>
+		<fontSize>0.03</fontSize>
+		<pos>1 1</pos>
+	</text>
+	<datetime name="md_releasedate">
+		<color>969696</color>
+		<forceUppercase>0</forceUppercase>
+		<fontPath>./art/font.ttf</fontPath>
+		<fontSize>0.023</fontSize>
+		<pos>1 1</pos>
+		<size>0 0.033</size>
+	</datetime>
+	<text name="md_genre, md_developer">
+		<color>969696</color>
+		<forceUppercase>0</forceUppercase>
+		<fontPath>./art/font.ttf</fontPath>
+		<fontSize>0.03</fontSize>
+	</text>
+	<text name="md_genre">
+		<pos>1 1</pos>
+		<size>0 0.033</size>
+	</text>
+	<text name="md_developer">
+		<pos>1 1</pos>
+		<size>0 0.033</size>
+	</text>
+	<text name="md_players">
+		<color>969696</color>
+		<forceUppercase>0</forceUppercase>
+		<fontPath>./art/font.ttf</fontPath>
+		<fontSize>0.07</fontSize>
+		<alignment>left</alignment>
+		<pos>1 1</pos>
+		<size>0.09 0</size>
+	</text>
+	<helpsystem name="help">
+		<fontPath>./art/Digital-Serial-Bold.ttf</fontPath>
+		<origin>0.5 1</origin>
+		<pos>0.5 0.985</pos>
+		<fontSize>0.034</fontSize>
+		<textColor>a4b7c4</textColor>
+		<iconColor>a4b7c4</iconColor>
+	</helpsystem>
+	<sound name="launch">
+		<path>./sounds/se_sys_click_game.wav</path> <!-- Sonido de pasar juego en lista -->
+	</sound>
+</view>
+<view name="basic, detailed">
+    <image name="md_image">
+		<pos>0.7911458333333334 0.426</pos>  <!--Posición de la imagen en caso de no tener video-->
+		<maxSize>0.3333333333333333 0.4444444444444444</maxSize>  <!--Tamaño de la imagen en caso de no tener video-->
+		<origin>0.5 0.5</origin>
+	</image>
+</view>
+<feature supported="video">
+    <view name="video">
+		<video name="md_video">
+            <origin>0.5 0.5</origin>
+			<pos>0.7911458333333334 0.426</pos> <!-- Posicion del video -->
+			<maxSize>0.3333333333333333 0.4444444444444444</maxSize> <!-- Tamaño del video, el video se ajusta a este tamaño sin importar cual tenga de origen -->
+			<delay>0.7</delay> <!-- Tienpo que tarda en aparecer en video (no testeado) -->	
+			<showSnapshotNoVideo>true</showSnapshotNoVideo>
+			<showSnapshotDelay>true</showSnapshotDelay>
+			<zIndex>101</zIndex>
+		</video>
+        
+		<image name="md_marquee">
+			<pos>0.8 0.085</pos> <!-- Posicion de wheel -->
+			<origin>0.5 0.5</origin>
+			<maxSize>0.310 0.110</maxSize> <!-- Tamaño de wheel -->
+		</image>
+		
+		<image name="sc_overlay" extra="true"> <!-- El overlay (escanlines) de la zona de video se modifica en cada archivo theme-->
+			<pos>0.631 0.195</pos>
+			<origin>0 0</origin>
+			<size>0.330 0.452</size>
+			<path>./art/screen_overlay.png</path>
+			<zIndex>101</zIndex>
+		</image>
+	</view>
+</feature>        
+
+<view name="grid">
+    <text name="md_name">
+		<pos>0.04 .175</pos>
+		<origin>0 0</origin>
+		<size>0.5 0.075</size>
+	</text>
+	<imagegrid name="gamegrid">
+		<pos>0.050 0.25</pos>
+		<size>0.5 0.64</size>
+		<margin>0.02 0.02</margin>
+	</imagegrid>
+	<gridtile name="default">
+        <size>0.15 0.2</size>
+		<padding>2 2</padding>
+		<backgroundCornerSize>8 8</backgroundCornerSize>
+		<backgroundColor>ffffff13</backgroundColor>        
+	</gridtile>
+	<gridtile name="selected">
+		<backgroundEdgeColor>0B0B3B</backgroundEdgeColor>
+        <imageColor>FFFFFFFF</imageColor>
+	</gridtile>
+	<video name="md_video">
+		<pos>0.7911458333333334 0.4259259259259259</pos>
+		<maxSize>0.3333333333333333 0.4444444444444444</maxSize>
+		<origin>0.5 0.5</origin>			
+        <delay>0.2</delay>
+		<default></default>
+		<showSnapshotNoVideo>true</showSnapshotNoVideo>
+		<showSnapshotDelay>false</showSnapshotDelay>
+	</video>
+	<image name="md_marquee">
+		<pos>0.8 0.085</pos>
+		<origin>0.5 0.5</origin>
+		<maxSize>0.310 0.110</maxSize>
+	</image>
+</view>
+</theme>

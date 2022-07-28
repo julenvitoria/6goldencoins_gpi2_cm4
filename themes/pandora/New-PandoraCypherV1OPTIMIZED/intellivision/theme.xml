@@ -1,0 +1,59 @@
+<theme>
+    <formatVersion>3</formatVersion>
+    <include>./../pandorabox.xml</include>
+
+	<view name="system">
+
+				
+		
+		<image name="logo">
+			<path>./art/system.png</path>
+     </image>
+		
+	</view>
+
+	<view name="basic, detailed, video">
+
+	<image name="background">
+			<tile>false</tile>
+			<pos>0 0</pos>
+			<origin>0 0</origin>
+			<size>1 1</size>
+			<path>./../art/bg_wide.png</path>
+		</image>
+	
+		
+		<image name="logo">
+			<path>./art/system.png</path>
+			<pos>0.30 0.08</pos> <!-- Posición logo de sistema -->
+			<maxSize>0.316 0.090</maxSize> <!-- Tamaño logo de sistema -->
+			<origin>0.5 0.5</origin>
+		</image>
+
+
+	</view>
+
+	<view name="detailed, video">
+	
+	<image name="sc_overlay" extra="true"> <!-- El overlay (escanlines) de la zona de video se modifica aquí -->
+			<pos>0.7911458333333334 0.426</pos>
+			<origin>0.5 0.5</origin>
+			<size>0.3333333333333333 0.4444444444444444</size>
+			<path>./../art/screen_overlay.png</path>
+		</image>
+		
+		<datetime name="md_releasedate">
+			<pos>1 1</pos>
+		</datetime>
+		<text name="md_lbl_releasedate, md_lbl_genre, md_genre, md_lbl_developer, md_developer, md_lbl_players, md_players">
+			<pos>1 1</pos>
+		</text>
+		<text name="md_description">
+			<fontSize>0.03</fontSize>
+			<size>0.290 0.130</size>
+			<pos>0.651 0.711</pos>
+		</text>		
+		
+	</view>
+	
+</theme>
