@@ -182,7 +182,7 @@ fi
 cd '/home/pi/RetroPie/retropiemenu/#Menu-Addons/'
 echo "Descargando iconos del menu addons..."
 sleep 2
-/home/pi/scripts/github-downloader.sh https://raw.githubusercontent.com/julenvitoria/6goldencoins_gpi2_cm4/tree/master/menu-addons/iconos
+/home/pi/scripts/github-downloader.sh https://github.com/julenvitoria/6goldencoins_gpi2_cm4/tree/master/menu-addons/iconos
 
 #Restart EmulationStation
 /home/pi/scripts/multi_switch.sh --ES-RESTART
