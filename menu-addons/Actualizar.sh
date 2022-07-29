@@ -103,6 +103,15 @@ else
         sudo sed -i 's|</gameList>|\t<game>\n\t\t<path>./#Menu-Addons/#Temas/SLGBtheme.sh</path>\n\t\t<name>SuperLopezGB theme + Launchings</name>\n\t\t<desc>Script para instalar el tema SuperLopezGB de mlopezmad y launchings a juego.</desc>\n\t\t<image></image>\n\t\t<playcount>0</playcount>\n\t\t<lastplayed>20180514T205700</lastplayed>\n\t</game>\n</gameList>|' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
 fi
 
+#Instalar tema y launchings New-PandoraCypherV1OPTIMIZED
+wget -O- https://raw.githubusercontent.com/julenvitoria/6goldencoins_gpi2_cm4/main/themes/pandora.sh>'/home/pi/RetroPie/retropiemenu/#Menu-Addons/#Temas/pandora.sh'
+chmod +x '/home/pi/RetroPie/retropiemenu/#Menu-Addons/#Temas/pandora.sh'
+if grep -q "pandora.sh" /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml ; then
+        echo "New-PandoraCypherV1OPTIMIZED ya se encuentra gamelist.xml"
+else
+        sudo sed -i 's|</gameList>|\t<game>\n\t\t<path>./#Menu-Addons/#Temas/pandora.sh</path>\n\t\t<name>New-PandoraCypherV1OPTIMIZED theme + Launchings</name>\n\t\t<desc>Script para instalar el tema New-PandoraCypherV1OPTIMIZED del proyecto Plata-O-Roms y launchings a juego.</desc>\n\t\t<image></image>\n\t\t<playcount>0</playcount>\n\t\t<lastplayed>20180514T205700</lastplayed>\n\t</game>\n</gameList>|' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
+fi
+
 #Crear directorio de fixes
 if [ -d '/home/pi/RetroPie/retropiemenu/#Menu-Addons/#fixes' ]; then
         echo "Directorio fixes ya fue creado anteriormente... Borrando y descargando de nuevo..."
