@@ -24,7 +24,7 @@ fi
 
 #descargar tema y launchings
 cd /home/pi/tmp
-/home/pi/scripts/github-downloader.sh https://github.com/julenvitoria/6goldencoins_gpi2_cm4/tree/main/themes/pandora
+/home/pi/scripts/github-downloader.sh https://github.com/julenvitoria/6goldencoins_gpi2_cm4/tree/master/themes/pandora
 
 #mover el tema a su destino y cambiar propietario (por si acaso)
 mv "/home/pi/tmp/pandora/New-PandoraCypherV1OPTIMIZED" "/home/pi/.emulationstation/themes"
