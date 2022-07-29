@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo ""
+echo ""
+
 #hacer directorio temporal
 cd /home/pi
 if [ -d /home/pi/tmp ]; then
