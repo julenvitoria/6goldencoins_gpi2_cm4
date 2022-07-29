@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo ""
+echo ""
+
 cd /home/pi
 if [ -d "/home/pi/.emulationstation/themes/Super Retroboy/" ]; then
         echo "Super Retroboy theme was downloaded yet"
