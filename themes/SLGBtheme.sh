@@ -5,13 +5,13 @@ echo ""
 
 cd /home/pi
 if [ -d "/home/pi/.emulationstation/themes/SuperLopezGB/" ]; then
-        echo "Super Lopez GB theme was downloaded yet"
-        echo "Deleting and redownloading..."
+        echo " El tema Super Lopez GB ya se ha descargado anteriormente."
+        echo "Borrando y volviendo a descargar..."
         sleep 2
         sudo rm -r "/home/pi/.emulationstation/themes/SuperLopezGB/"
         mkdir -p "/home/pi/.emulationstation/themes/SuperLopezGB/" && sudo git clone https://github.com/mlopezmad/SuperLopezGB "/home/pi/.emulationstation/themes/SuperLopezGB/"
 else
-        echo "Downloading Super Lopez GB theme..."
+        echo "Descargando tema Super Lopez GB theme..."
         sleep 2
         mkdir -p "/home/pi/.emulationstation/themes/SuperLopezGB/" && git clone https://github.com/mlopezmad/SuperLopezGB "/home/pi/.emulationstation/themes/SuperLopezGB/"
         sudo chown pi:pi /home/pi/.emulationstation/themes/SuperLopezGB -R
@@ -32,7 +32,8 @@ fi
 #Download and install launching images
 cd /home/pi/tmp
 /home/pi/scripts/github-downloader.sh https://github.com/mlopezmad/SuperLopezGB-Launching
-echo "COPYING LAUNCHING IMAGES..."
+echo ""
+echo "Copiando launchings..."
 sleep 3
 cp -R SuperLopezGB-Launching/trunk/* /opt/retropie/configs
 cd /home/pi
