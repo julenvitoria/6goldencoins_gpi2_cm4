@@ -86,7 +86,7 @@ else
 fi
 
 #Instalar tema y launchings Super Retroboy 
-wget -O- https://raw.githubusercontent.com/julenvitoria/Kelboy-SuperRetroBoyTheme/main/ThemePlusLaunchings.sh>'/home/pi/RetroPie/retropiemenu/#Menu-Addons/#Temas/SRBtheme.sh'
+wget -O- https://raw.githubusercontent.com/julenvitoria/6goldencoins_gpi2_cm4/main/themes/SuperRetroBoy.sh>'/home/pi/RetroPie/retropiemenu/#Menu-Addons/#Temas/SRBtheme.sh'
 chmod +x '/home/pi/RetroPie/retropiemenu/#Menu-Addons/#Temas/SRBtheme.sh'
 if grep -q "SRBtheme.sh" /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml ; then
         echo "SRBtheme ya se encuentra gamelist.xml"
