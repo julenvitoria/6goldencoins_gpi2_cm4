@@ -95,7 +95,7 @@ else
 fi
 
 #Instalar tema y launchings SuperLopezGB
-wget -O- https://raw.githubusercontent.com/julenvitoria/Kelboy-SuperLopezGBTheme/main/SLGBtheme.sh>'/home/pi/RetroPie/retropiemenu/#Menu-Addons/#Temas/SLGBtheme.sh'
+wget -O- https://raw.githubusercontent.com/julenvitoria/6goldencoins_gpi2_cm4/main/themes/SLGBtheme.sh>'/home/pi/RetroPie/retropiemenu/#Menu-Addons/#Temas/SLGBtheme.sh'
 chmod +x '/home/pi/RetroPie/retropiemenu/#Menu-Addons/#Temas/SLGBtheme.sh'
 if grep -q "SLGBtheme.sh" /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml ; then
         echo "SLGBtheme ya se encuentra gamelist.xml"
