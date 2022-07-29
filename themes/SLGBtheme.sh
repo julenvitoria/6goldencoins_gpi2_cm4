@@ -7,22 +7,16 @@ if [ -d "/home/pi/.emulationstation/themes/SuperLopezGB/" ]; then
         sleep 2
         sudo rm -r "/home/pi/.emulationstation/themes/SuperLopezGB/"
         mkdir -p "/home/pi/.emulationstation/themes/SuperLopezGB/" && sudo git clone https://github.com/mlopezmad/SuperLopezGB "/home/pi/.emulationstation/themes/SuperLopezGB/"
-        cd "/home/pi/.emulationstation/themes/SuperLopezGB/"
-        sudo chown pi:pi -R * 
-        #sed -i -e 's/<fontSize>0.042/<fontSize>0.06/g' SuperRetroboy.xml
-        #sed -i -e 's/<fontSize>0.025/<fontSize>0.035/g' SuperRetroboy.xml
-        #sed -i -e 's/<fontSize>0.04/<fontSize>0.055/g' SuperRetroboy.xml
 else
         echo "Downloading Super Lopez GB theme..."
         sleep 2
         mkdir -p "/home/pi/.emulationstation/themes/SuperLopezGB/" && git clone https://github.com/mlopezmad/SuperLopezGB "/home/pi/.emulationstation/themes/SuperLopezGB/"
         sudo chown pi:pi /home/pi/.emulationstation/themes/SuperLopezGB -R
-        cd "/home/pi/.emulationstation/themes/SuperLopezGB/"
-        sudo chown pi:pi -R * 
-        #sed -i -e 's/<fontSize>0.042/<fontSize>0.06/g' SuperRetroboy.xml
-        #sed -i -e 's/<fontSize>0.025/<fontSize>0.035/g' SuperRetroboy.xml
-        #sed -i -e 's/<fontSize>0.04/<fontSize>0.055/g' SuperRetroboy.xml
 fi
+
+cd "/home/pi/.emulationstation/themes/SuperLopezGB/"
+sudo rm -R .git
+sudo chown pi:pi -R *
 
 #make temporal directory
 cd /home/pi
@@ -40,7 +34,7 @@ sleep 3
 cp -R SuperLopezGB-Launching/trunk/* /opt/retropie/configs
 cd /home/pi
 rm -r tmp
-echo "Terminated"
+echo "Proceso concluido"
 sleep 1
 #Change theme value on EmulationStation config file
 sed -i 's/.*<string name="ThemeSet" value=.*/<string name="ThemeSet" value="SuperLopezGB" \/>/' /opt/retropie/configs/all/emulationstation/es_settings.cfg
