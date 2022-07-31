@@ -12,6 +12,7 @@ else
         mkdir /home/pi/tmp
 fi
 
+#comprobar si el tema esta descargado ya
 if [ -d "/home/pi/.emulationstation/themes/New-PandoraCypherV1OPTIMIZED/" ]; then
         echo "El tema Pandora ya se ha descargado anteriormente."
         echo "Borrando y volviendo a descargar..."
