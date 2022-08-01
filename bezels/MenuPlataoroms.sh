@@ -19,7 +19,7 @@ dialog --backtitle "Plata o ROMs v3" \
    7 "Aplicar Bezel (solo bezel) 16:9" \
    8 "Aplicar Bezel (solo bezel) 4:3" \
    9 "Aplicar Bezel (solo bezel) 5:4" \
-   10 "Aplicar Bezel GPI Case 2 (4:3 640x480)"\
+   10 "Submenu Bezel GPI Case 2 (4:3 640x480)"\
    11 "Desactivar bezel" \
    12 "Actualizar bezel repo" \
    13 "Overclock Pi2, Pi3, Pi3b+ y Pi4 on-off" \
@@ -497,9 +497,9 @@ case $menuitem in
       #Retorno al menu princiapal scriptMenuPlataoroms
       /home/pi/RetroPie/script/MenuPlataoroms.sh
     clear;;
-  10)#Aplicar Bezel GPI Case 2 (4:3 640x480)
+  10)#Submenu Bezel GPI Case 2 (4:3 640x480)
      clear
-     /home/pi/RetroPie/script/bezelsgpi.sh
+     /home/pi/scripts/bezelsgpi.sh
      #Retorno al menu princiapal scriptMenuPlataoroms
      /home/pi/RetroPie/script/MenuPlataoroms.sh
      clear;;
