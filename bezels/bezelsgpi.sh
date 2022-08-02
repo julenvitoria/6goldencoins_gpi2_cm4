@@ -41,21 +41,28 @@ case $menuitem in
     echo ""
     echo ""
     echo ""
-    if [ ! "`ping -c 1 github.com`" ]
-    then
-    echo "No hay conexion con GitHub.com"
-    sleep 3
-    exit 0
+    #comprobamos la conexion a github
+    if [ ! "`ping -c 1 github.com`" ]; then
+        echo "No hay conexion con GitHub.com"
+        echo "Por favor, revisa tu conexion."
+        sleep 4
+    else
+        echo "Conexion con GitHub.com establecida, continuando..."
+        sleep 2
+        #revisamos di existe el directorio a donde descargaremos y si existe se borra para descargar de nuevo
+        if [ -d "/home/pi/scripts/bezelsgpi/" ]; then
+            rm -r "/home/pi/scripts/bezelsgpi/"
+            sleep 1
+        fi
+        echo "Descargando bezels para GPI Case 2..."
+        sleep 2
+        #descargamos los
+        bezels
+        /home/pi/scripts/github-downloader.sh https://github.com/julenvitoria/6goldencoins_gpi2_cm4/tree/master/bezels/bezels
+        #descargamos los configs
+        cd /home/pi/retropie/configs
+        /home/pi/scripts/github-downloader.sh https://github.com/julenvitoria/6goldencoins_gpi2_cm4/tree/master/bezels/bezelsgpiconf
     fi
-    echo "Conexion con GitHub.com establecida, continuando..."
-    sleep 2
-    if [ -d "/home/pi/scripts/bezelsgpi/" ]; then
-        rm -r "/home/pi/scripts/bezelsgpi/"
-        sleep 1
-    fi
-    echo "Descargando bezels para GPI Case 2..."
-    sleep 2
-    /home/pi/scripts/github-downloader.sh https://github.com/julenvitoria/6goldencoins_gpi2_cm4/tree/master/bezels/bezels
     #Retorno al menu principal bezelsgpi
     /home/pi/RetroPie/script/bezelsgpi.sh
     clear;;
