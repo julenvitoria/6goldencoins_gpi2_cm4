@@ -34,7 +34,7 @@ case $menuitem in
 
   Este mensaje se autocerrara en 3 segundos" 17 55 ; sleep 3
     #Retorno al menu principal bezelsgpi
-    /home/pi/RetroPie/script/bezelsgpi.sh
+    /home/pi/scripts/bezelsgpi.sh
     clear;;
   2)#Actualizar Bezels GPI Case 2
     clear
@@ -63,7 +63,7 @@ case $menuitem in
         cd 
     fi
     #Retorno al menu principal bezelsgpi
-    /home/pi/RetroPie/script/bezelsgpi.sh
+    /home/pi/scripts/bezelsgpi.sh
     clear;;
   3)clear; exit 0;;
 esac
