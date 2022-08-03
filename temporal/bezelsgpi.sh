@@ -52,7 +52,7 @@ case $menuitem in
         sleep 2
         #revisamos di existe el directorio a donde descargaremos y si existe se borra para descargar de nuevo
         if [ -d "/home/pi/scripts/bezels/" ]; then
-            rm -r "/home/pi/scripts/bezels/"
+            sudo rm -R "/home/pi/scripts/bezels/"
             sleep 1
         fi
         echo "Descargando bezels para GPI Case 2..."
