@@ -26,9 +26,10 @@ if [ "1" = $HDMI_HPD_VALUE  ]; then
 		sudo cp -f "/boot/config.txt" "/boot/config_lcd.txt"
 		sudo rm -f /boot/config.txt
 		sudo cp -f "/boot/config_hdmi.txt" "/boot/config.txt"
+		/home/pi/scripts/bezelshdmi.sh
 		sudo shutdown -r now  
 		sleep 10     
-  fi
+	fi
 else
 	if [ "0" = $ISLCDFILE ]; then 
 		#mount -o remount, rw /boot
@@ -38,9 +39,10 @@ else
 		sudo cp -f "/boot/config.txt" "/boot/config_hdmi.txt"
 		sudo rm -f /boot/config.txt
 		sudo cp -f "/boot/config_lcd.txt" "/boot/config.txt"
+		/home/pi/scripts/bezelslcd.sh
 		sudo shutdown -r now 
 		sleep 10      
-  fi
+	fi
 fi
    
 

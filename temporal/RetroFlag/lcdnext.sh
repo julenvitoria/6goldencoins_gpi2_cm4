@@ -23,7 +23,8 @@ File=/usr/share/alsa/alsa.conf
 				sudo cp -f "/boot/config.txt" "/boot/config_lcd.txt"
 				sudo rm -f /boot/config.txt
 				sudo cp -f "/boot/config_hdmi.txt" "/boot/config.txt"
-		  fi
+				/home/pi/scripts/bezelshdmi.sh
+			fi
 		else
 			if [ $ISLCDFILE = "0" ]; then  
 				#mount -o remount, rw /boot
@@ -33,6 +34,7 @@ File=/usr/share/alsa/alsa.conf
 				sudo cp -f "/boot/config.txt" "/boot/config_hdmi.txt"
 			 	sudo rm -f /boot/config.txt
 				sudo cp -f "/boot/config_lcd.txt" "/boot/config.txt"
-		  fi
+				/home/pi/scripts/bezelslcd.sh
+			fi
 		fi
     

@@ -13,13 +13,4 @@ find /opt/retropie/configs/ -type f \( -name "retroarch.cfg" -a -not -wholename 
 cd /home/pi/scripts/bezels/bezelsgpiconf
 cp -R * /opt/retropie/configs/
 #cp /home/pi/RetroPie/script/atari5200/retroarch-1080.cfg /opt/retropie/configs/atari5200/retroarch.cfg
-sleep 0.5
-dialog --infobox "
-
-
-             Bezels GPI Case 2
-                APLICADOS!!!!
-
-
-
-  Este mensaje se autocerrara en 3 segundos" 17 55 ; sleep 3
+sleep 2
