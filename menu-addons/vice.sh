@@ -23,7 +23,7 @@ echo "Descargando core lr-vice y aplicando fix..."
 echo ""
 mkdir /home/pi/scripts/tmp/
 cd /home/pi/scripts/tmp/
-/home/pi/scripts/github-downloader.sh https://raw.githubusercontent.com/julenvitoria/6goldencoins_gpi2_cm4/tree/master/menu-addons/patchs/lr-vice
+/home/pi/scripts/github-downloader.sh https://github.com/julenvitoria/6goldencoins_gpi2_cm4/tree/master/menu-addons/patchs/lr-vice
 sudo rm -R /opt/retropie/libretrocores/lr-vice
 sudo cp -R lr-vice /opt/retropie/libretrocores/
 sudo chmod +x /opt/retropie/libretrocores/lr-vice/vice_x64_libretro.so
