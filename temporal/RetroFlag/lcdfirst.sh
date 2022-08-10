@@ -27,7 +27,8 @@ if [ "1" = $HDMI_HPD_VALUE  ]; then
 		sudo rm -f /boot/config.txt
 		sudo cp -f "/boot/config_hdmi.txt" "/boot/config.txt"
 		/home/pi/scripts/bezelshdmi.sh
-		sudo shutdown -r now  
+		#sudo shutdown -r now
+		/home/pi/scripts/multi_switch.sh --ES-REBOOT
 		sleep 10     
 	fi
 else
@@ -40,7 +41,8 @@ else
 		sudo rm -f /boot/config.txt
 		sudo cp -f "/boot/config_lcd.txt" "/boot/config.txt"
 		/home/pi/scripts/bezelslcd.sh
-		sudo shutdown -r now 
+		#sudo shutdown -r
+		/home/pi/scripts/multi_switch.sh --ES-REBOOT
 		sleep 10      
 	fi
 fi
