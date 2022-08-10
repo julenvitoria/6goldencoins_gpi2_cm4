@@ -1,6 +1,10 @@
 #!/bin/bash
 # realizado para la imagen 6GoldenCoins de la gpi case 2 por @JulenSR
 
+if grep "hdmi" /home/pi/scripts/modo.txt ; then
+    exit 0
+fi
+
 #Buscamos y borramos todos los cfg en /roms para despues borrarlos, una vez borrados se procedera a copiar los seleccionados
 find /home/pi/RetroPie/roms/ -type f -name "*.cfg" -exec rm -f {} \;
 find /opt/retropie/configs/ -type f \( -name "retroarch.cfg" -a -not -wholename "*pc/retroarch.cfg" -wholename "*gameandwatch/retroarch.cfg" -wholename "*dreamcast/retroarch.cfg" -wholename "*all/retroarch.cfg" \)  -exec rm -f {} \;
@@ -35,3 +39,4 @@ find /opt/retropie/configs/cps3 -type f -name 'retroarch.cfg' | xargs sed -i 's/
 find /opt/retropie/configs/vectrex -type f -name 'retroarch.cfg' | xargs sed -i 's/.*audio_volume = .*/audio_volume = "3"/'
 cp /home/pi/RetroPie/script/atari5200/retroarch-1080.cfg /opt/retropie/configs/atari5200/retroarch.cfg
 sleep 2
+echo hdmi > /home/pi/scripts/modo.txt

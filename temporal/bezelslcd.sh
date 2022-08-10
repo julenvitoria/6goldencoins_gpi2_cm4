@@ -1,6 +1,10 @@
 #!/bin/bash
 # realizado para la imagen 6GoldenCoins de la gpi case 2 por @JulenSR
 
+if grep "lcd" /home/pi/scripts/modo.txt ; then
+    exit 0
+fi
+
 #Aplicar Bezel GPI Case 2 (4:3 640x480)
 clear
 echo ""
@@ -14,3 +18,4 @@ cd /home/pi/scripts/bezels/bezelsgpiconf
 cp -R * /opt/retropie/configs/
 #cp /home/pi/RetroPie/script/atari5200/retroarch-1080.cfg /opt/retropie/configs/atari5200/retroarch.cfg
 sleep 2
+echo lcd > /home/pi/scripts/modo.txt

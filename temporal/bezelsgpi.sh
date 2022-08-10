@@ -50,7 +50,7 @@ case $menuitem in
     else
         echo "Conexion con GitHub.com establecida, continuando..."
         sleep 2
-        #revisamos di existe el directorio a donde descargaremos y si existe se borra para descargar de nuevo
+        #revisamos si existe el directorio a donde descargaremos y si existe se borra para descargar de nuevo
         if [ -d "/home/pi/scripts/bezels/" ]; then
             sudo rm -R "/home/pi/scripts/bezels/"
             sleep 1
