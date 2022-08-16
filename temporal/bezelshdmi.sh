@@ -2,6 +2,7 @@
 # realizado para la imagen 6GoldenCoins de la gpi case 2 por @JulenSR
 
 if grep "hdmi" /home/pi/scripts/modo.txt ; then
+    echo "ya estaba aplicado para hdmi" > /home/pi/scripts/mode.txt
     exit 0
 fi
 
@@ -40,3 +41,4 @@ find /opt/retropie/configs/vectrex -type f -name 'retroarch.cfg' | xargs sed -i 
 cp /home/pi/RetroPie/script/atari5200/retroarch-1080.cfg /opt/retropie/configs/atari5200/retroarch.cfg
 sleep 2
 echo hdmi > /home/pi/scripts/modo.txt
+echo "bezels aplicados para hdmi" > /home/pi/scripts/mode.txt
