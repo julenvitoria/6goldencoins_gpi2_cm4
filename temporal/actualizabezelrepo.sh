@@ -85,6 +85,7 @@ case $menuitem in
         /home/pi/scripts/github-downloader.sh https://github.com/julenvitoria/6goldencoins_gpi2_cm4/tree/master/bezels
         sudo chown -R pi:pi /home/pi/scripts/bezels
 		fi
+	fi
 	sleep 4
 	sudo /home/pi/RetroPie/script/MenuPlataoroms.sh;
 	clear ;;
