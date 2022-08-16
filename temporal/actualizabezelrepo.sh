@@ -53,9 +53,9 @@ case $menuitem in
 			cd /home/pi/RetroPie
 			git pull
 			echo "Realizado pull"
-		echo "Cambiado de permisos"
-		sudo chown -R -c pi:pi /home/pi/RetroPie/bezelsconfig
-		sudo chown -R -c pi:pi /home/pi/RetroPie/bezels
+			echo "Cambiado de permisos"
+			sudo chown -R -c pi:pi /home/pi/RetroPie/bezelsconfig
+			sudo chown -R -c pi:pi /home/pi/RetroPie/bezels
 			sudo chown -R -c pi:pi /home/pi/RetroPie/.git
 		#si NO existe se realiza clonado
 		else
@@ -66,12 +66,13 @@ case $menuitem in
 			mv /home/pi/RetroPie/script/tempbezel/* /home/pi/RetroPie/
 			mv /home/pi/RetroPie/script/tempbezel/\.git* /home/pi/RetroPie/
 			echo "Movido de tempbezel a RetroPie"
-		sleep 2
-		sudo chown -R -c pi:pi /home/pi/RetroPie/bezelsconfig
+			sleep 2
+			sudo chown -R -c pi:pi /home/pi/RetroPie/bezelsconfig
 			sudo chown -R -c pi:pi /home/pi/RetroPie/bezels
-		sudo chown -R -c pi:pi /home/pi/RetroPie/.git
+			sudo chown -R -c pi:pi /home/pi/RetroPie/.git
 			rm -rf /home/pi/RetroPie/script/tempbezel
 			echo "Borrado tempbezel realizado"
+		fi
 		sleep 2
 		#revisamos si existe el directorio a donde descargaremos y si existe se borra para descargar de nuevo
         if [ -d "/home/pi/scripts/bezels/" ]; then
@@ -84,7 +85,6 @@ case $menuitem in
         cd /home/pi/scripts
         /home/pi/scripts/github-downloader.sh https://github.com/julenvitoria/6goldencoins_gpi2_cm4/tree/master/bezels
         sudo chown -R pi:pi /home/pi/scripts/bezels
-		fi
 	fi
 	sleep 4
 	sudo /home/pi/RetroPie/script/MenuPlataoroms.sh;
@@ -133,6 +133,7 @@ case $menuitem in
         cd /home/pi/scripts
         /home/pi/scripts/github-downloader.sh https://github.com/julenvitoria/6goldencoins_gpi2_cm4/tree/master/bezels
         sudo chown -R pi:pi /home/pi/scripts/bezels
+	fi
 	sleep 4
 	sudo /home/pi/RetroPie/script/MenuPlataoroms.sh;
 	clear ;;
