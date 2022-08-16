@@ -12,7 +12,7 @@ find /opt/retropie/configs/ -type f \( -name "retroarch.cfg" -a -not -wholename 
 cp -pr /home/pi/RetroPie/bezelsconfig/1080/* /
 #Copiamos el contenido de hacks de arcade a arcade y despues borramos el directorio hacks
 cp -pr '/home/pi/RetroPie/roms/arcade/# Hacks Arcade Games #/*.cfg' /home/pi/RetroPie/roms/arcade
- #rm -R /home/pi/RetroPie/roms/arcade/#\ Hacks\ Arcade\ Games\ #/
+#rm -R /home/pi/RetroPie/roms/arcade/#\ Hacks\ Arcade\ Games\ #/
 #Copiamos los bezels de cps a arcade y cambiamos el directorio a donde apunta el remapping directory a arcade
 cp -pr /home/pi/RetroPie/roms/cps/*.cfg /home/pi/RetroPie/roms/arcade
 cp -pr '/home/pi/RetroPie/roms/cps/# Hacks Capcom Play System #/*.cfg' /home/pi/RetroPie/roms/arcade
