@@ -10,14 +10,13 @@ dialog --backtitle "Plata o ROMs v3" \
 --ok-label Aplicar \
 --cancel-label Salir \
 --menu "Seleccionar (arriba/abajo) presiona A para aceptar: " 17 55 10 \
-   1 "Aplicar Bezel 16:9  " \
-   2 "Submenu Bezel GPI Case 2 (4:3 640x480)"\
-   3 "Desactivar bezel" \
-   4 "Actualizar bezel repo" \
-   5 "Overclock Pi2, Pi3, Pi3b+ y Pi4 on-off" \
-   6 "Ejecutar backup partidas" \
-   7 "Creditos" \
-   8 "Salir" 2>"${INPUT}"
+   1 "Aplicar Bezel 16:9 (HDMI) o 4:3 (LCD)  " \
+   2 "Desactivar bezel" \
+   3 "Actualizar bezel repo" \
+   4 "Overclock Pi2, Pi3, Pi3b+ y Pi4 on-off" \
+   5 "Ejecutar backup partidas" \
+   6 "Creditos" \
+   7 "Salir" 2>"${INPUT}"
 menuitem=$(<"${INPUT}")
 case $menuitem in
   1)#Aplicar Bezels (Por defecto)
@@ -82,13 +81,7 @@ case $menuitem in
      #Retorno al menu principal scriptMenuPlataoroms
      /home/pi/RetroPie/script/MenuPlataoroms.sh
      clear;;
-  2)#Submenu Bezel GPI Case 2 (4:3 640x480)
-     clear
-     /home/pi/scripts/bezelsgpi.sh
-     #Retorno al menu princiapal scriptMenuPlataoroms
-     /home/pi/RetroPie/script/MenuPlataoroms.sh
-     clear;;
-  3)#Desactivar bezel
+  2)#Desactivar bezel
      clear
      echo ""
      echo ""
@@ -122,22 +115,22 @@ case $menuitem in
      #Retorno al menu princiapal scriptMenuPlataoroms
      /home/pi/RetroPie/script/MenuPlataoroms.sh
      clear;;
-  4)#Actualizar bezel repo
+  3)#Actualizar bezel repo
      clear
      /home/pi/RetroPie/script/actualizabezelrepo.sh
      clear;;
-  5)#Overclock Pi2, Pi3, pi3b+ y pi4 on-off
+  4)#Overclock Pi2, Pi3, pi3b+ y pi4 on-off
      clear
      /home/pi/RetroPie/script/overclock.sh
      clear;;
-  6)#Ejecutar backup partidas
+  5)#Ejecutar backup partidas
      clear
      /home/pi/RetroPie/script/Installer_savegame/Install_savegames.sh
      clear;;
-  7)clear
+  6)clear
      sudo /home/pi/RetroPie/retropiemenu/Creditos.sh
      sudo /home/pi/RetroPie/script/MenuPlataoroms.sh
      clear;;
-  16)clear; exit 0;;
+  7)clear; exit 0;;
 esac
 clear
