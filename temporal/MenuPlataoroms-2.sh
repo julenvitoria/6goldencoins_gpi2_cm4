@@ -31,7 +31,7 @@ case $menuitem in
 		echo ""
 		echo ""
 		echo ""
-		echo "Aplicando la opcion seleccionada... un momento, por favor :)"
+		echo "Aplicando bezels 4:3... un momento, por favor :)"
 		#Buscamos y borramos todos los cfg en /roms para despues borrarlos, una vez borrados se procedera a copiar los seleccionados
 		find /home/pi/RetroPie/roms/ -type f -name "*.cfg" -exec rm -f {} \;
 		find /opt/retropie/configs/ -type f \( -name "retroarch.cfg" -a -not -wholename "*pc/retroarch.cfg" -wholename "*gameandwatch/retroarch.cfg" -wholename "*dreamcast/retroarch.cfg" -wholename "*all/retroarch.cfg" \)  -exec rm -f {} \;
@@ -42,6 +42,11 @@ case $menuitem in
 		echo lcd > /home/pi/scripts/modo.txt
      fi
      if grep "hdmi" /home/pi/scripts/modo.txt ; then
+		clear
+		echo ""
+		echo ""
+		echo ""
+		echo "Aplicando bezels 16:9... un momento, por favor :)"
 		#Buscamos y borramos todos los cfg en /roms para despues borrarlos, una vez borrados se procedera a copiar los seleccionados
 		find /home/pi/RetroPie/roms/ -type f -name "*.cfg" -exec rm -f {} \;
 		find /opt/retropie/configs/ -type f \( -name "retroarch.cfg" -a -not -wholename "*pc/retroarch.cfg" -wholename "*gameandwatch/retroarch.cfg" -wholename "*dreamcast/retroarch.cfg" -wholename "*all/retroarch.cfg" \)  -exec rm -f {} \;
