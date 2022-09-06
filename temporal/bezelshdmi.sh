@@ -1,7 +1,8 @@
 #!/bin/bash
 # realizado para la imagen 6GoldenCoins de la gpi case 2 por @JulenSR
 
-if grep "hdmi" /home/pi/scripts/modo.txt ; then
+if grep "hdmi" /home/pi/scripts/modo.txt
+then
     echo "ya estaba aplicado para hdmi" > /home/pi/scripts/mode.txt
     exit 0
 fi
@@ -39,6 +40,9 @@ find /opt/retropie/configs/cps2 -type f -name 'retroarch.cfg' | xargs sed -i 's/
 find /opt/retropie/configs/cps3 -type f -name 'retroarch.cfg' | xargs sed -i 's/.*audio_volume = .*/audio_volume = "3"/'
 find /opt/retropie/configs/vectrex -type f -name 'retroarch.cfg' | xargs sed -i 's/.*audio_volume = .*/audio_volume = "3"/'
 cp /home/pi/RetroPie/script/atari5200/retroarch-1080.cfg /opt/retropie/configs/atari5200/retroarch.cfg
-sleep 2
+sleep 1
+find /home/pi/RetroPie/roms/ -name "*.cfg" -type f -print0 | xargs -0 sed -i 's/video_fullscreen_x/#video_fullscreen_x/g'
+find /home/pi/RetroPie/roms/ -name "*.cfg" -type f -print0 | xargs -0 sed -i 's/video_fullscreen_y/#video_fullscreen_y/g'
+sleep 1
 echo hdmi > /home/pi/scripts/modo.txt
 echo "bezels aplicados para hdmi" > /home/pi/scripts/mode.txt
