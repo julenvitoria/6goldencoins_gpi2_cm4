@@ -40,9 +40,9 @@ find /opt/retropie/configs/cps2 -type f -name 'retroarch.cfg' | xargs sed -i 's/
 find /opt/retropie/configs/cps3 -type f -name 'retroarch.cfg' | xargs sed -i 's/.*audio_volume = .*/audio_volume = "3"/'
 find /opt/retropie/configs/vectrex -type f -name 'retroarch.cfg' | xargs sed -i 's/.*audio_volume = .*/audio_volume = "3"/'
 cp /home/pi/RetroPie/script/atari5200/retroarch-1080.cfg /opt/retropie/configs/atari5200/retroarch.cfg
-sleep 1
+sleep 0.5
 find /home/pi/RetroPie/roms/ -name "*.cfg" -type f -print0 | xargs -0 sed -i 's/video_fullscreen_x/#video_fullscreen_x/g'
 find /home/pi/RetroPie/roms/ -name "*.cfg" -type f -print0 | xargs -0 sed -i 's/video_fullscreen_y/#video_fullscreen_y/g'
-sleep 1
+sleep 0.5
 echo hdmi > /home/pi/scripts/modo.txt
 echo "bezels aplicados para hdmi" > /home/pi/scripts/mode.txt
