@@ -14,6 +14,6 @@ find /opt/retropie/configs/ -type f \( -name "retroarch.cfg" -a -not -wholename 
 cd /home/pi/scripts/bezels/bezelsgpiconf
 cp -R * /opt/retropie/configs/
 #cp /home/pi/RetroPie/script/atari5200/retroarch-1080.cfg /opt/retropie/configs/atari5200/retroarch.cfg
-sleep 2
+sleep 0.5
 echo lcd > /home/pi/scripts/modo.txt
 echo "bezels aplicados para lcd" > /home/pi/scripts/mode.txt
