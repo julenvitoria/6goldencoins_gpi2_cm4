@@ -21,12 +21,11 @@ if [ "1" = $HDMI_HPD_VALUE  ]; then
 	if [ "1" = $ISLCDFILE ]; then  
 		#mount -o remount, rw /boot
 		#mount -o remount, rw /	 
-		
+		/home/pi/scripts/bezelshdmi.sh
 		sudo rm -f /boot/config_lcd.txt
 		sudo cp -f "/boot/config.txt" "/boot/config_lcd.txt"
 		sudo rm -f /boot/config.txt
 		sudo cp -f "/boot/config_hdmi.txt" "/boot/config.txt"
-		/home/pi/scripts/bezelshdmi.sh
 		#sudo shutdown -r now
 		/home/pi/scripts/multi_switch.sh --ES-REBOOT
 		sleep 10     
@@ -35,12 +34,11 @@ else
 	if [ "0" = $ISLCDFILE ]; then 
 		#mount -o remount, rw /boot
 		#mount -o remount, rw /	 
-		
+		/home/pi/scripts/bezelslcd.sh
 		sudo rm -f /boot/config_hdmi.txt
 		sudo cp -f "/boot/config.txt" "/boot/config_hdmi.txt"
 		sudo rm -f /boot/config.txt
 		sudo cp -f "/boot/config_lcd.txt" "/boot/config.txt"
-		/home/pi/scripts/bezelslcd.sh
 		#sudo shutdown -r
 		/home/pi/scripts/multi_switch.sh --ES-REBOOT
 		sleep 10      

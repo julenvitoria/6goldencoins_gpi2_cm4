@@ -86,6 +86,7 @@ case $menuitem in
 		sleep 1
 		echo hdmi > /home/pi/scripts/modo.txt
      fi
+	 echo nodesactivado > /home/pi/scripts/desactivado.txt
      #Retorno al menu principal scriptMenuPlataoroms
      /home/pi/RetroPie/script/MenuPlataoroms.sh
      clear;;
@@ -120,7 +121,8 @@ case $menuitem in
 
 
       Este mensaje se autocerrara en 3 segundos" 17 55 ; sleep 3
-     #Retorno al menu princiapal scriptMenuPlataoroms
+     echo desactivado > /home/pi/scripts/desactivado.txt
+	 #Retorno al menu princiapal scriptMenuPlataoroms
      /home/pi/RetroPie/script/MenuPlataoroms.sh
      clear;;
   3)#Actualizar bezel repo
