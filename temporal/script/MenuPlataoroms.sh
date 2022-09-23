@@ -83,6 +83,8 @@ case $menuitem in
 		sleep 1
 		find /home/pi/RetroPie/roms/ -name "*.cfg" -type f -print0 | xargs -0 sed -i 's/video_fullscreen_x/#video_fullscreen_x/g'
 		find /home/pi/RetroPie/roms/ -name "*.cfg" -type f -print0 | xargs -0 sed -i 's/video_fullscreen_y/#video_fullscreen_y/g'
+		cd /home/pi/scripts/bezels/configshdmi
+		cp -R * /opt/retropie/configs/
 		sleep 1
 		echo hdmi > /home/pi/scripts/modopantalla.txt
      fi

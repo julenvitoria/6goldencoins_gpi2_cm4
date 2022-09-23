@@ -79,7 +79,7 @@ case $menuitem in
             sudo rm -R "/home/pi/scripts/bezels/"
             sleep 1
         fi
-        echo "Descargando bezels para GPI Case 2 4:3..."
+        echo "Descargando bezels para GPI Case 2 16:9 y 4:3..."
         sleep 2
         #descargamos los bezels y los configs
         cd /home/pi/scripts
@@ -127,7 +127,7 @@ case $menuitem in
             sudo rm -R "/home/pi/scripts/bezels/"
             sleep 1
         fi
-        echo "Descargando bezels para GPI Case 2 4:3..."
+        echo "Descargando bezels para GPI Case 2 16:9 y 4:3..."
         sleep 2
         #descargamos los bezels y los configs
         cd /home/pi/scripts
