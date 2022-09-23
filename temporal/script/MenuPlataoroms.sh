@@ -39,7 +39,7 @@ case $menuitem in
 		cp -R * /opt/retropie/configs/
 		#cp /home/pi/RetroPie/script/atari5200/retroarch-1080.cfg /opt/retropie/configs/atari5200/retroarch.cfg
 		sleep 2
-		echo lcd > /home/pi/scripts/modo.txt
+		echo lcd > /home/pi/scripts/modopantalla.txt
      fi
      if grep "hdmi" /home/pi/scripts/modo.txt ; then
 		clear
@@ -84,9 +84,9 @@ case $menuitem in
 		find /home/pi/RetroPie/roms/ -name "*.cfg" -type f -print0 | xargs -0 sed -i 's/video_fullscreen_x/#video_fullscreen_x/g'
 		find /home/pi/RetroPie/roms/ -name "*.cfg" -type f -print0 | xargs -0 sed -i 's/video_fullscreen_y/#video_fullscreen_y/g'
 		sleep 1
-		echo hdmi > /home/pi/scripts/modo.txt
+		echo hdmi > /home/pi/scripts/modopantalla.txt
      fi
-	 echo nodesactivado > /home/pi/scripts/desactivado.txt
+	 echo on > /home/pi/scripts/desactivado.txt
      #Retorno al menu principal scriptMenuPlataoroms
      /home/pi/RetroPie/script/MenuPlataoroms.sh
      clear;;
@@ -121,7 +121,7 @@ case $menuitem in
 
 
       Este mensaje se autocerrara en 3 segundos" 17 55 ; sleep 3
-     echo desactivado > /home/pi/scripts/desactivado.txt
+     echo off > /home/pi/scripts/desactivado.txt
 	 #Retorno al menu princiapal scriptMenuPlataoroms
      /home/pi/RetroPie/script/MenuPlataoroms.sh
      clear;;

@@ -1,0 +1,5 @@
+copia y restaura los favoritos buscando entre los gamelist.xml de los sistemas
+
+favoritos_c.py copia los favoritos en favoritos.xml
+
+favoritos_r.py restaura los favoritos en los gamelist.xml

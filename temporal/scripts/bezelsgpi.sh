@@ -1,12 +1,22 @@
 #!/bin/bash
 # realizado para la imagen 6GoldenCoins de la gpi case 2 por @JulenSR
 
-if grep "lcd" /home/pi/scripts/modopantalla.txt
+if grep off /home/pi/scripts/desactivado.txt
 then
-    exit 0
-else
-	if grep "lcd" /home/pi/scripts/modo.txt
+	#Modo bezels desactivados
+	echo "Bezels desactivados, se prosigue la carga..."
+	echo 0 > /home/pi/scripts/estado.txt
+	exit 0
+	#echo "desactivado" > /home/pi/scripts/bezels.txt
+fi
+
+if grep lcd /home/pi/scripts/modopantalla.txt
+then
+	if grep lcd /home/pi/scripts/modo.txt
 	then
+		echo 1 > /home/pi/scripts/estado.txt
+		exit 0
+	else
 		#Aplicar Bezel GPI Case 2 (4:3 640x480)
 		echo ""
 		echo ""
@@ -21,15 +31,17 @@ else
 		sleep 0.5
 		echo lcd > /home/pi/scripts/modo.txt
 		echo "bezels aplicados para lcd" > /home/pi/scripts/bezels.txt
+		echo 11 > /home/pi/scripts/estado.txt
 	fi
 fi
 
-if grep "hdmi" /home/pi/scripts/modopantalla.txt
+if grep hdmi /home/pi/scripts/modopantalla.txt
 then
-    exit 0
-else
-	if grep "hdmi" /home/pi/scripts/modo.txt
+	if grep hdmi /home/pi/scripts/modo.txt
 	then
+		echo 2 > /home/pi/scripts/estado.txt
+		exit 0
+	else
 		#Aplicar Bezel GPI Case 2 (16:9)
 		echo ""
 		echo ""
@@ -74,12 +86,7 @@ else
 		sleep 0.5
 		echo hdmi > /home/pi/scripts/modo.txt
 		echo "bezels aplicados para hdmi" > /home/pi/scripts/bezels.txt
+		echo 22 > /home/pi/scripts/estado.txt
 	fi
 fi
 
-if grep "desactivado" /home/pi/scripts/desactivado.txt
-then
-	#Modo bezels desactivados
-	echo "Bezels desactivados, se prosigue la carga..."
-	echo "desactivado" > /home/pi/scripts/bezels.txt
-fi

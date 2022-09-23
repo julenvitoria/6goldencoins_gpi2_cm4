@@ -1,6 +1,11 @@
 #!/bin/bash
 # realizado para la imagen 6GoldenCoins de la gpi case 2 por @JulenSR
 
+if grep "desactivado" /home/pi/scripts/desactivado.txt
+then
+    exit 0
+fi
+
 if grep "lcd" /home/pi/scripts/modo.txt
 then
     echo "ya estaba aplicado para lcd" > /home/pi/scripts/mode.txt
