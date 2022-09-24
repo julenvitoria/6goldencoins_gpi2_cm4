@@ -35,6 +35,9 @@ fi
 cd /home/pi/tmp
 /home/pi/scripts/github-downloader.sh https://github.com/julenvitoria/Kelboy-SuperRetroBoyTheme
 echo ""
+echo "Descargando icono Pixel Desktop y copiandolo a su ubicacion final"
+/home/pi/scripts/github-downloader.sh https://github.com/julenvitoria/6goldencoins_gpi2_cm4/tree/master/themes/SRBtheme/pixel
+mv pixel "/opt/retropie/configs/all/emulationstation/themes/Super Retroboy/"
 echo "Copiando launchings..."
 sleep 3
 cp -R /home/pi/tmp/Kelboy-SuperRetroBoyTheme/trunk/configs/* /opt/retropie/configs
