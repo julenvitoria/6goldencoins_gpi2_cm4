@@ -5,7 +5,7 @@ echo ""
 
 cd /home/pi
 if [ -d "/home/pi/.emulationstation/themes/SuperLopezGB/" ]; then
-        echo " El tema Super Lopez GB ya se ha descargado anteriormente."
+        echo "El tema Super Lopez GB ya se ha descargado anteriormente."
         echo "Borrando y volviendo a descargar..."
         sleep 2
         sudo rm -r "/home/pi/.emulationstation/themes/SuperLopezGB/"
@@ -32,6 +32,10 @@ fi
 #Download and install launching images
 cd /home/pi/tmp
 /home/pi/scripts/github-downloader.sh https://github.com/mlopezmad/SuperLopezGB-Launching
+echo ""
+echo "Descargando icono Pixel Desktop y copiandolo a su ubicacion final"
+/home/pi/scripts/github-downloader.sh https://github.com/julenvitoria/6goldencoins_gpi2_cm4/tree/master/themes/SLGBtheme/pixel
+mv pixel "/opt/retropie/configs/all/emulationstation/themes/SuperLopezGB/"
 echo ""
 echo "Copiando launchings..."
 sleep 3
