@@ -39,7 +39,11 @@ cp -R SuperLopezGB-Launching/trunk/* /opt/retropie/configs
 echo ""
 echo "Descargando icono Pixel Desktop y copiandolo a su ubicacion final"
 /home/pi/scripts/github-downloader.sh https://github.com/julenvitoria/6goldencoins_gpi2_cm4/tree/master/themes/SLGBtheme/pixel
+rm /opt/retropie/configs/all/emulationstation/themes/SuperLopezGB/cps
+rm /opt/retropie/configs/all/emulationstation/themes/SuperLopezGB/cps1
 mv pixel "/opt/retropie/configs/all/emulationstation/themes/SuperLopezGB/"
+mv cps "/opt/retropie/configs/all/emulationstation/themes/SuperLopezGB/"
+mv cps1 "/opt/retropie/configs/all/emulationstation/themes/SuperLopezGB/"
 cd /home/pi
 rm -r tmp
 echo "Proceso concluido"
