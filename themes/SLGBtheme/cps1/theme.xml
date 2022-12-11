@@ -1,0 +1,40 @@
+﻿<theme>
+    <formatVersion>3</formatVersion>
+    <include>./../superlopezgb.xml</include>
+
+	<view name="system">
+
+		<image name="background_pattern" extra="true">
+			<path>./art/background.png</path>
+			<origin>0.5 0.5</origin>
+			<pos>0.5 0.5</pos>
+			<size>1 1</size>
+			<color>aeaeae</color>
+			<tile>false</tile>
+		</image>
+		
+		<image name="logo">
+			<path>./art/system.png</path>
+        </image>
+		
+	</view>
+
+	<view name="basic, detailed, video">
+
+		<image name="logo">
+			<path>./art/system.png</path>
+           <origin>0.5 0.5</origin>
+                   <pos>0.18 0.045</pos>
+                   <maxSize>0.36 0.09</maxSize>
+		</image>
+
+		
+	</view>
+
+	<view name="basic">		
+	</view>
+
+	<view name="detailed">
+	</view>
+	
+</theme>
